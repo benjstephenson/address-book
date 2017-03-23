@@ -9,7 +9,7 @@ import scala.util.{ Failure, Success, Try }
 
 object CsvParser extends CsvParser {
   def getLines(path: String): Try[Seq[String]] = Try {
-    io.Source.fromFile(path).getLines.toList
+    io.Source.fromResource(path).getLines.toList
   }
 }
 
